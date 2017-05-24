@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(5, 6);
+SoftwareSerial mySerial(5, 6); //(RX,TX)
 #include <SPI.h>
 #include <MFRC522.h>
 
@@ -19,11 +19,8 @@ for (byte i = 0; i < 6; i++) {
     key.keyByte[i] = 0xFF;
   }
 
-  
-   delay(100); 
+ delay(100); 
   }
-
-
 
 void loop() {
  
@@ -47,7 +44,7 @@ if (rfid.uid.uidByte[0] != nuidPICC[0])
     
   }
      
-if (rfid.uid.uidByte[0]=21);
+if (rfid.uid.uidByte[0]=21); //Predefined tag ID onlychecking first string
 
 {
   int a=100,b;
